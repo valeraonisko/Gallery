@@ -1,0 +1,11 @@
+#thumbs li {
+  list-style: none;
+}
+
+#thumbs a {
+  float: left;
+  padding: 3px;
+  margin: 3px;
+  width: 100px;
+  height: 100px;
+}
