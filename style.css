@@ -1,8 +1,8 @@
-#thumbs li {
+li {
   list-style: none;
 }
 
-#thumbs a {
+a {
   float: left;
   padding: 3px;
   margin: 3px;
