@@ -1,16 +1,16 @@
-let largeImg = document.getElementById('largeImg');
-let thumbs = document.getElementById('thumbs');
-thumbs.onclick = function(event) {
-  console.log('click');
-  let target = event.target;
-  while (target != this) {
-    if (target.nodeName == 'A') {
-      largeImg.src = target.href;
-      return false;
-    }
-    target = target.parentNode;
-  }
+const largeImg = document.getElementById('largeImg');
+const thumbs = document.getElementById('thumbs');
+
+function clickListener(event) {
+  event.preventDefault();
+  const target = event.target;
+  const aTarget = target.closest('a');
+  largeImg.src = aTarget.href;
+  largeImg.alt = aTarget.title;
 }
+
+thumbs.addEventListener ('click', clickListener, true);
+
 //  предзагр больших картинок
 // var largeImages = thumbs.getElementsByTagName('img');
 // for (let i = 0; i < largeImages.length; i++) {
